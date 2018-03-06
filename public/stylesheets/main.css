@@ -1,18 +1,21 @@
-.content img{
-	float: left
-}
-
 .content p{
-	padding: auto;
+	transform: translateY(50%);
+	height:100%;
 }
 
-.footer{
+.row{
+	padding: 20px;
+}
+
+
+
+#footer{
 	position: absolute;
 	background-color: #000;
 	color: white;
 	text-align: center;
 	right:0;
-	bottom: 0;
 	left: 0;
 	padding: 1rem;
+	margin-top: 10px;
 }
