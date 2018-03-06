@@ -11,16 +11,21 @@ app.set("view engine", "ejs");
 //***************************
 //		BASIC ROUTES
 //***************************
-//index route.  redirects to homepage
+//index route.  renders landing page
 app.get("/", function(req, res)
 {
-	res.send("it works");
+	res.render("landing");
 });
 
-// Redirects to the home route
+// renders to the home route
 app.get("/home", function(req, res)
 {
-	res.send("the future looks bright");
+	res.render("index");
+});
+
+app.get("/bars", function(req, res)
+{
+	res.render("bars");
 });
 
 
