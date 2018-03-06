@@ -1,4 +1,7 @@
-body{
-	/* Test to see if styles work*/
-	background-color: purple;
+.content img{
+	float: left
+}
+
+.content p{
+	padding: auto;
 }

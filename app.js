@@ -12,23 +12,38 @@ app.use(express.static(__dirname + "/public"));
 //***************************
 //		BASIC ROUTES
 //***************************
-//index route.  renders landing page
+//index route.  
 app.get("/", function(req, res)
 {
-	res.render("landing");
+	res.render("landing"); //render landing page for start up
 });
 
-// renders to the home route
+//home route renders to the home route
 app.get("/home", function(req, res)
 {
-	res.render("index");
+	res.render("index");  //renders the home route
 });
 
-app.get("/bars", function(req, res)
+//bars route renders the bars page
+app.get("/events", function(req, res)
 {
-	res.render("bars");
+	res.render("events");  //renders the bars page
 });
 
+app.get("/events/:id", function(req, res)
+{
+	res.send("TODO");  //will render the event info page
+})
+
+
+
+
+
+//catch all route renders the "404" page
+app.get("/*", function(req, res)
+{
+	res.send("You may be lost");
+});
 
 
 
