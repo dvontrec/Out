@@ -16,19 +16,6 @@ router.get("/home", function(req, res)
 	res.render("index");  //renders the home route
 });
 
-//events route renders the events page
-router.get("/events", function(req, res)
-{
-	res.render("events");  //renders the bars page
-});
-
-//event ID route, will show details of specific events
-router.get("/events/:id", function(req, res)
-{
-	res.send("TODO");  //will render the event info page
-})
-
-
 
 
 
