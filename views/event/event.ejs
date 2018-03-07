@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+<div class="container text-center">
+		<header class="jumbotron">
+			<div class="container">
+				<h1>Lets Go Out</h1>
+				<p>Todays most popular events</p>
+				<button><a href="#">Surprise me</a></button>
+			</div>
+		</header>
+
+	<div class="row text-center" style="display: flex;; flex-wrap: wrap;">
+	<!-- PLACEHOLDER  -->
+	<% events.forEach(function(event){ %> 
+		<div class="col-md-3">
+			<img src="<%= event.image %>">
+		</div>
+		<div class="col-md-9">
+			<h2><%= event.title %></h2>
+			<p><%= event.description %></p>
+			<div class="actions">
+				<button class="btn btn-lg btn-default">Details</button>
+				<button class="btn btn-lg btn-info">Share</button>
+			</div>
+		</div>
+	</div>
+	<% }) %>
+	<!-- END PLACEHOLDER -->
+	</div>
+</div>
+
+<% include ../partials/footer %>

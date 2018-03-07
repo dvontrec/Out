@@ -23,7 +23,7 @@ app.use(express.static(__dirname + "/public"));
 //					ROUTES
 //***********************************************
 //allows application to use event routes
-app.use("/events", eventRoutes);
+app.use("/event", eventRoutes);
 //allows application to use routes from index.js file
 app.use("/", indexRoutes);
 
