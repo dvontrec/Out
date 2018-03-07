@@ -1,7 +1,9 @@
 //basic setup variables
-var express = require("express"),
-	port 	= 8000,
-	app 	= express();
+var express 	= require("express"),
+	port 		= 8000,
+	app 		= express(),
+	bodyParser 	= require("body-parser"),
+	mongoose	= require("mongoose");
 
 //route variables
 var indexRoutes = require("./routes/index");
