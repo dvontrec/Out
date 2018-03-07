@@ -26,8 +26,10 @@ router.get("/", function(req, res)
 router.get("/:id", function(req, res)
 {
 	//finds event based on the ID
-	var Event = Event.findById(req.params.id)
-	res.send("/event/show", {Event:Event});  //will render specific event info page
+	Event.findById(req.params.id, function(err, event)
+	{
+		res.render("event/show", {Event:event});  //will render specific event info page
+	});
 });
 //UPDATE
 //DESTROY

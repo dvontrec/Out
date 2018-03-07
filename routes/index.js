@@ -11,14 +11,5 @@ router.get("/", function(req, res)
 });
 
 
-
-
-
-//catch all route renders the "404" page
-// router.get("/*", function(req, res)
-// {
-// 	res.send("You may be lost");
-// });
-
 //exports all routes
 module.exports=router;
