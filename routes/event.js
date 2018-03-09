@@ -21,7 +21,29 @@ router.get("/", function(req, res)
 
 
 
-//CREATE
+//CREATE 
+//form
+router.get("/create", function(req, res)
+{
+	res.render("event/new");
+});
+//functionality
+router.post("/", function(req, res)
+{
+	var newEvent = req.body.event;	//Grabs event created in the "/new" form
+	Event.create(newEvent, function(err, newEvent)
+	{
+		if(err || !newEvent)
+		{
+			console.log(err);
+		}
+		else
+		{
+			res.redirect("/");	//redirects back to event index page;
+		}
+	});
+});
+
 //READ
 router.get("/:id", function(req, res)
 {
