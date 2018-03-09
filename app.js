@@ -1,10 +1,11 @@
 //basic setup variables
-var express 	= require("express"),
-	port 		= 8000,
-	app 		= express(),
-	bodyParser 	= require("body-parser"),
-	mongoose	= require("mongoose"),
-	Event 		= require("./models/event");
+var express 		= require("express"),
+	port 			= 8000,
+	app 			= express(),
+	bodyParser 		= require("body-parser"),
+	mongoose		= require("mongoose"),
+	methodOverride 	= require("method-override");
+	Event 			= require("./models/event");
 
 //route variables
 var indexRoutes = require("./routes/index"),
@@ -14,10 +15,12 @@ var indexRoutes = require("./routes/index"),
 mongoose.connect("mongodb://localhost/louisville_out");
 //the application can use body parser to get info from forms sent from pages
 app.use(bodyParser.urlencoded({extended:true}));
-//sets view enjine to ejs
+//sets view enjine to ejs so we dont have to put ".ejs" into the file endings
 app.set("view engine", "ejs");
 //allws the application to use the public folder 'used to acess stylesheets'
 app.use(express.static(__dirname + "/public"));
+//allows app to use override methods
+app.use(methodOverride("_method"));	//tells methodOverride to look for "_method" 
 
 //***********************************************
 //					ROUTES

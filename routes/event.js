@@ -33,13 +33,14 @@ router.post("/", function(req, res)
 	var newEvent = req.body.event;	//Grabs event created in the "/new" form
 	Event.create(newEvent, function(err, newEvent)
 	{
+		//checks if an error or an event to be created
 		if(err || !newEvent)
 		{
 			console.log(err);
 		}
 		else
 		{
-			res.redirect("/");	//redirects back to event index page;
+			res.redirect("/event");	//redirects back to event index page;
 		}
 	});
 });
@@ -55,5 +56,21 @@ router.get("/:id", function(req, res)
 });
 //UPDATE
 //DESTROY
+router.delete("/:id", function(req, res)
+{
+	//find the campground
+	Event.findByIdAndRemove(req.params.id, function(err)	//deletes the found event
+	{
+		if(err)
+		{
+			res.send(err);
+		}
+		else
+		{
+			res.redirect("/event");
+		}
+	});
+	
+});
 
 module.exports = router;

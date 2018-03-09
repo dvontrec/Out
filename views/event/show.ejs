@@ -1,4 +1,7 @@
 <% include ../partials/header %>
 	<h1><%= Event.title %></h1>
 	<h1><%= Event.description %></h1>
+	<form action="/event/<%= Event._id %>?_method=DELETE" method="POST">
+		<button>Delete</button>
+	</form>
 <% include ../partials/footer %>
