@@ -1,0 +1,38 @@
+body{
+	text-align: center;;
+}
+
+.loader{
+	height:200px;
+	width: 200px;
+	margin:auto;
+	border: 16px solid lightgrey;
+	border-radius: 50%;
+	border-bottom: 16px solid green;
+	border-top: 16px solid yellow;
+	animation: loading 2s linear infinite;
+}
+
+.message{
+	opacity: 0;
+	animation: message 5s linear 4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes loading{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes message{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
