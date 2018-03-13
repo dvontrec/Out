@@ -54,7 +54,28 @@ router.get("/:id", function(req, res)
 		res.render("event/show", {Event:event});  //will render specific event info page
 	});
 });
+
 //UPDATE
+//form
+router.get("/:id/edit", function(req,res)
+{
+	//finds the event in database
+	Event.findById(req.params.id, function(err, foundEvent)
+	{
+		res.render("event/edit", {event:foundEvent});//
+	});
+});
+//functionality
+router.put("/:id", function(req, res)
+{
+	//finds the event in the database and updates it
+	Event.findByIdAndUpdate(req.params.id, req.body.event, function(err, updatedEvent)
+	{
+		//redirects to updated event page
+		res.redirect("/event/" + req.params.id);
+	});
+});
+
 //DESTROY
 router.delete("/:id", function(req, res)
 {

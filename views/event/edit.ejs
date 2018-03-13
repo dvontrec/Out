@@ -1,0 +1,9 @@
+<% include ../partials/header%>
+	<h1>Create New Event</h1>
+	<form action="/event/<%= event._id %>?_method=PUT" method="POST">
+		<input type="text" name="event[title]" value="<%= event.title %>">
+		<input type="text" name="event[image]" value="<%= event.image %>">
+		<textarea name="event[description]"><%= event.description %></textarea>
+		<button>Submit</button>
+	</form>
+<% include ../partials/footer %>
