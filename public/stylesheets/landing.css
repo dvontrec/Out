@@ -1,0 +1,21 @@
+body{
+	background-image: url("https://drscdn.500px.org/photo/193268353/w%3D280_h%3D280/a6574cd4d1670bf1073359865967a6d4?v=3");
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+
+.hero{
+	display: flex;;
+	flex-direction: column;
+	padding: 15% 15%;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero a{
+	flex-basis: 100%;
+	border-radius:5px;
+	padding: 5px;
+	background-color: #fff; 
+}
