@@ -1,12 +1,32 @@
 body{
-	background-image: url("https://drscdn.500px.org/photo/193268353/w%3D280_h%3D280/a6574cd4d1670bf1073359865967a6d4?v=3");
-	background-size: cover;
-	background-position: center;
+	margin:0;
 	color: white;
+}
+header{
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	background-color: #000;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .links ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style: none;
+}
+header .links ul li{
+	padding: 0 5px;
 }
 
 .hero{
-	display: flex;;
+	background-image: url("https://drscdn.500px.org/photo/193268353/w%3D280_h%3D280/a6574cd4d1670bf1073359865967a6d4?v=3");
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
 	flex-direction: column;
 	padding: 15% 15%;
 	justify-content: center;
