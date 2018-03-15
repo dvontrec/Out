@@ -1,3 +1,37 @@
+body{
+	margin: 0;
+	color: #696969;
+}
+
+/*HEADER section*/
+header{
+	display: flex;
+	direction: row;
+}
+
+header{
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	background-color: #000;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .links ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style: none;
+}
+header .links ul li{
+	padding: 0 5px;
+}
+
+
+
+
+
 .content p{
 	transform: translateY(50%);
 	height:100%;

@@ -1,25 +1,17 @@
 <% include ../partials/header %>
-<div class="container text-center">
-		<header class="jumbotron">
-			<div class="container">
-				<h1>Lets Go Out</h1>
-				<p>Todays most popular events</p>
-				<button><a href="#">Surprise me</a></button>
-			</div>
-		</header>
-
-	<div class="row text-center" style="display: flex;; flex-wrap: wrap;">
+<div >
+	<div>
 	<!-- PLACEHOLDER  -->
 	<% events.forEach(function(event){ %> 
-		<div class="col-md-3">
+		<div >
 			<img src="<%= event.image %>">
 		</div>
-		<div class="col-md-9">
+		<div >
 			<h2><%= event.title %></h2>
 			<p><%= event.description %></p>
-			<div class="actions">
-				<button class="btn btn-lg btn-default"><a href="event/<%= event._id %>">Details</a></button>
-				<button class="btn btn-lg btn-info"><a>Share</a></button>
+			<div> 
+				<button><a href="event/<%= event._id %>">Details</a></button>
+				<button><a>Share</a></button>
 			</div>
 		</div>
 	</div>
